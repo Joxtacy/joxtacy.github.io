@@ -11,7 +11,7 @@ app.controller('myCtrl', function($scope) {
     $scope.joxPoint=0;
 
     $scope.increase = function() {
-		$scope.joxPoint++;
+		$scope.joxPoint = $scope.joxPoint+1;
     }
 });
 </script>
@@ -56,7 +56,7 @@ app.controller('myCtrl', function($scope) {
 				Games won
 			</td>
 			<td>
-				{{$scope.joxPoint}}
+				{{joxPoint}}
 			</td>
 			<td>
 				0
