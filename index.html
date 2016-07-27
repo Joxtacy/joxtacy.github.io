@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html> 
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.firstName= "John";
     $scope.lastName= "Doe";
+
+    $scope.joxPoint=0;
+
+    $scope.increase = function() {
+		$scope.joxPoint++;
+    }
 });
 </script>
+
 <title>Telavox Dice Game Statistics</title>
+
 <div ng-app="myApp" ng-controller="myCtrl">
 
 	First Name: <input type="text" ng-model="firstName"><br>
 	Last Name: <input type="text" ng-model="lastName"><br>
 	<br>
 	Full Name: {{firstName + " " + lastName}}
+	<br>
 
-</div>
-
-<body> 
 	<table>
 		<tr>
 			<td>
 				
 			</td>
 			<td>
+			<button data-ng-click="increase()">+</button>
 				Jesper
 			</td>
 			<td>
@@ -48,7 +56,7 @@ app.controller('myCtrl', function($scope) {
 				Games won
 			</td>
 			<td>
-				0
+				{{$scope.joxPoint}}
 			</td>
 			<td>
 				0
@@ -90,5 +98,8 @@ app.controller('myCtrl', function($scope) {
 			</td>
 		</tr>
 	</table>
+</div>
+
+<body>
 </body> 
 </html>
