@@ -7,13 +7,29 @@
 		}
 	</style>
 </head>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDyZ24Qt9vkNOhr5Cur00oWurqglY8co-s",
+    authDomain: "telavox-dice-game-statistics.firebaseapp.com",
+    databaseURL: "https://telavox-dice-game-statistics.firebaseio.com",
+    storageBucket: "telavox-dice-game-statistics.appspot.com",
+  };
+  firebase.initializeApp(config);
 
+  // Get a reference to the database service
+  var database = firebase.database();
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.firstName= "John";
     $scope.lastName= "Doe";
+
+    $scope.players = ["Jesper", "Nina", "Emma", "Julia", "Erik", "John", "Martin", "Viktor", "Johan", "Paulina"];
 
     $scope.joxPoint=0;
 
@@ -39,28 +55,25 @@ app.controller('myCtrl', function($scope) {
 	<br>
 	<table>
 		<tr>
+			<td></td>
+			<td>Games Won</td>
+			<td>Games Played</td>
+			<td>Win/Loss</td>
+		</tr>
+		<tr data-ng-repeat="player in players | orderBy: player">
+			<td>{{player}}</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0.0</td>
+		</tr>
+		<tr>
 			<td>
 				
 			</td>
 			<td align="center">
-			<button data-ng-click="decrease()">-</button>
+				<button data-ng-click="decrease()">-</button>
 				Jesper
-			<button data-ng-click="increase()">+</button>
-			</td>
-			<td>
-				John
-			</td>
-			<td>
-				Paulina
-			</td>
-			<td>
-				Erik
-			</td>
-			<td>
-				Thomas
-			</td>
-			<td>
-				Emma
+				<button data-ng-click="increase()">+</button>
 			</td>
 		</tr>
 		<tr>
@@ -70,40 +83,10 @@ app.controller('myCtrl', function($scope) {
 			<td>
 				{{joxPoint}}
 			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
-			</td>
 		</tr>
 		<tr>
 			<td>
 				Games played
-			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
-			</td>
-			<td>
-				0
 			</td>
 			<td>
 				0
