@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html> 
+<head>
+	<style type="text/css">
+		td {
+			text-align: center;
+		}
+	</style>
+</head>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <script>
@@ -11,7 +18,11 @@ app.controller('myCtrl', function($scope) {
     $scope.joxPoint=0;
 
     $scope.increase = function() {
-		$scope.joxPoint = $scope.joxPoint+1;
+        $scope.joxPoint = $scope.joxPoint+1;
+    }
+
+    $scope.decrease = function() {
+        $scope.joxPoint = $scope.joxPoint-1;
     }
 });
 </script>
@@ -25,15 +36,16 @@ app.controller('myCtrl', function($scope) {
 	<br>
 	Full Name: {{firstName + " " + lastName}}
 	<br>
-
+	<br>
 	<table>
 		<tr>
 			<td>
 				
 			</td>
-			<td>
-			<button data-ng-click="increase()">+</button>
+			<td align="center">
+			<button data-ng-click="decrease()">-</button>
 				Jesper
+			<button data-ng-click="increase()">+</button>
 			</td>
 			<td>
 				John
