@@ -56,41 +56,22 @@ app.controller('myCtrl', function($scope) {
 	<table>
 		<tr>
 			<td></td>
+			<td></td>
 			<td>Games Won</td>
 			<td>Games Played</td>
 			<td>Win/Loss</td>
 		</tr>
 		<tr data-ng-repeat="player in players | orderBy: player">
 			<td>{{player}}</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0.0</td>
-		</tr>
-		<tr>
 			<td>
-				
-			</td>
-			<td align="center">
 				<button data-ng-click="decrease()">-</button>
-				Jesper
 				<button data-ng-click="increase()">+</button>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Games won
 			</td>
 			<td>
 				{{joxPoint}}
 			</td>
-		</tr>
-		<tr>
-			<td>
-				Games played
-			</td>
-			<td>
-				0
-			</td>
+			<td>0</td>
+			<td>0.0</td>
 		</tr>
 	</table>
 </div>
