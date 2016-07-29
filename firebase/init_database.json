@@ -1,0 +1,14 @@
+{
+	"players" : {
+		"1" : {
+			"name" : "Jesper",
+			"wins" : 0,
+			"games_played" : 0
+		},
+		"2" : {
+			"name" : "Erik",
+			"wins" : 0,
+			"games_played" : 0
+		}
+	}	
+}
