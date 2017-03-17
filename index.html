@@ -10,75 +10,8 @@
 		}
 	</style>
 </head>
-<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDyZ24Qt9vkNOhr5Cur00oWurqglY8co-s",
-    authDomain: "telavox-dice-game-statistics.firebaseapp.com",
-    databaseURL: "https://telavox-dice-game-statistics.firebaseio.com",
-    storageBucket: "telavox-dice-game-statistics.appspot.com",
-  };
-  firebase.initializeApp(config);
-
-  // Get a reference to the database service
-  var database = firebase.database();
-</script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.firstName= "John";
-    $scope.lastName= "Doe";
-
-    $scope.players = ["Jesper", "Nina", "Emma", "Julia", "Erik", "John", "Martin", "Viktor", "Johan", "Paulina"];
-
-    $scope.joxPoint=0;
-
-    $scope.increase = function() {
-        $scope.joxPoint = $scope.joxPoint+1;
-    }
-
-    $scope.decrease = function() {
-        $scope.joxPoint = $scope.joxPoint-1;
-    }
-});
-</script>
-
-<title>Telavox Dice Game Statistics</title>
-
-<div ng-app="myApp" ng-controller="myCtrl">
-
-	First Name: <input type="text" ng-model="firstName"><br>
-	Last Name: <input type="text" ng-model="lastName"><br>
-	<br>
-	Full Name: {{firstName + " " + lastName}}
-	<br>
-	<br>
-	<table>
-		<tr>
-			<td></td>
-			<td></td>
-			<td>Games Won</td>
-			<td>Games Played</td>
-			<td>Win/Loss</td>
-		</tr>
-		<tr data-ng-repeat="player in players | orderBy: player">
-			<td>{{player}}</td>
-			<td>
-				<button data-ng-click="decrease()">-</button>
-				<button data-ng-click="increase()">+</button>
-			</td>
-			<td>
-				{{joxPoint}}
-			</td>
-			<td>0</td>
-			<td>0.0</td>
-		</tr>
-	</table>
-</div>
-
+<title>Joxtacy's Page</title>
 <body>
+    <h1>Hello World!</h1>
 </body> 
 </html>
