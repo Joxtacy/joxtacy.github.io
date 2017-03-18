@@ -19,17 +19,17 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 footer-links:
   dribbble:
   email: jesper.hasselquist@telavox.se
-  facebook:
+  facebook: joxtacy
   flickr:
   github: joxtacy
-  instagram:
-  linkedin:
+  instagram: joxtacy
+  linkedin: jesper-hasselquist-25871444
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+  youtube: channel/UCX_QGTY6ZLuqSUTIB8xJeLg # channel/<your_long_string> or user/<user-name>
+  googleplus: u/1/103286471381952792792 # anything in your profile username that comes after plus.google.com/
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
