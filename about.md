@@ -4,11 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hi!  
+I'm Jesper. Welcome to my page. I'm just a front-end pleb so please be gentle. I'm trying my best to get better and hopefully this page will reflect my skillz.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Coming soon.
 
 ### Contact me
 
