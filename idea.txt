@@ -8,3 +8,4 @@ Different tasks:
 -Morse code
 -Music notes to spell words
 -Picture(s) of places
+-Riddle
