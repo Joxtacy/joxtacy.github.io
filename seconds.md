@@ -4,5 +4,5 @@ title: Seconds
 permalink: /seconds/
 ---
 
-<script type="text/javascript" src="js/timerthing.js">timer();</script>
+<script type="text/javascript" src="../js/timerthing.js">timer();</script>
 
