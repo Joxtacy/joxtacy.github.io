@@ -5,6 +5,6 @@ permalink: /seconds/
 ---
 
 <script type="text/javascript" src="../js/timerthing.js">
-    document.write(timer());
+    document.write(<p>timer()</p>);
 </script>
 
