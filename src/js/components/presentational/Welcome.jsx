@@ -1,24 +1,21 @@
 import React, { useState } from "react";
-import Input from "./Input.jsx";
+import Button from "@material-ui/core/Button";
 
-const Welcome = ({}) => {
-    const [value, setValue] = useState("");
+const Welcome = () => {
+    const [count, setCount] = useState(0);
 
-    const handleChange = event => {
-        setValue(event.target.value);
+    const handleClick = () => {
+        setCount(count + 1);
     }
 
     return (
         <div>
-            <h1>Welcome!</h1>
-            <Input
-                label={"label"}
-                text={"text"}
-                type={"text"}
-                id={"id"}
-                value={value}
-                handleChange={handleChange}
-            ></Input> 
+            <h1>{`Welcome! ${count}`}</h1>
+            <Button
+                variant={"contained"}
+                color={"primary"}
+                onClick={handleClick}
+            >{"Hello Button!"}</Button>
         </div>
     )
 };

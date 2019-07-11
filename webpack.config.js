@@ -20,6 +20,10 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ["*", ".js", ".jsx", ".json"],
+    modules: ["node_modules"]
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
