@@ -27,7 +27,7 @@ export default {
         html({
             template: "src/index.html",
             dest: isProduction ? "public" : "serve",
-            filename: "../index.html"
+            filename: isProduction ? "../index.html" : "index.html"
         }),
 
         svelte({
