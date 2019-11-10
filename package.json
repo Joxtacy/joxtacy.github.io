@@ -4,8 +4,8 @@
   "description": "my github page",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development",
+    "build": "",
+    "start": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,21 +17,5 @@
   "bugs": {
     "url": "https://github.com/Joxtacy/joxtacy.github.io/issues"
   },
-  "homepage": "https://github.com/Joxtacy/joxtacy.github.io#readme",
-  "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
-  },
-  "dependencies": {
-    "@material-ui/core": "^4.2.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  }
+  "homepage": "https://github.com/Joxtacy/joxtacy.github.io#readme"
 }
