@@ -4,8 +4,8 @@
   "description": "my github page",
   "main": "index.js",
   "scripts": {
-    "build": "",
-    "start": "",
+    "build": "MODE=production rollup -c",
+    "start": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +17,21 @@
   "bugs": {
     "url": "https://github.com/Joxtacy/joxtacy.github.io/issues"
   },
-  "homepage": "https://github.com/Joxtacy/joxtacy.github.io#readme"
+  "homepage": "https://github.com/Joxtacy/joxtacy.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "rollup": "^1.26.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-bundle-html": "^0.2.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-delete": "^1.1.0",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-svelte": "^5.1.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.12.1"
+  }
 }
