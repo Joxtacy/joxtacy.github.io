@@ -15,25 +15,25 @@ export default {
     input: "src/index.js",
     output: {
         sourcemap: !isProduction,
-        file: isProduction ? "bundle-[hash].js" : "serve/bundle.js",
+        file: isProduction ? "public/bundle-[hash].js" : "serve/bundle.js",
         name: "app",
         format: "iife"
     },
     plugins: [
         del({
-            targets: isProduction ? "bundle*" : "serve/bundle*"
+            targets: isProduction ? "public/bundle*" : "serve/bundle*"
         }),
 
         html({
             template: "src/index.html",
-            dest: isProduction ? "." : "serve",
-            filename: "index.html"
+            dest: isProduction ? "public" : "serve",
+            filename: "../index.html"
         }),
 
         svelte({
             dev: !isProduction,
             css: css => {
-                css.write(isProduction ? "bundle-[hash].css" : "serve/bundle.css", !isProduction);
+                css.write(isProduction ? "public/bundle-[hash].css" : "serve/bundle.css", !isProduction);
             }
         }),
 
