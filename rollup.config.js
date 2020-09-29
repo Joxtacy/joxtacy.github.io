@@ -33,8 +33,8 @@ export default {
             ]
         }),
 
-        del({
-            targets: isProduction ? ["public/*", "index.html"] : "serve/*",
+        isProduction && del({
+            targets: ["public/*", "index.html"],
             verbose: true
         }),
 
