@@ -1,6 +1,13 @@
 :root {
     font-size: 16px;
     font-family: "Poppins", "sans-serif";
+    --text-primary:#b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --theme-primary: #ff7eee;
+    --theme-secondary: #df49a6;
+    --transition-speed: 600ms;
 }
 
 * {
@@ -24,11 +31,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background: #6649b8;
-}
-
-main {
-    margin-left: 5rem;
-    padding: 1rem;
 }
 
 ul {

@@ -2,7 +2,6 @@
     import Navbar from "./components/Navbar.svelte";
 </script>
 
-
 <Navbar />
 
 <main>
@@ -32,4 +31,17 @@
 </main>
 
 <style>
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    main {
+        margin-left: 0;
+        margin-bottom: 5rem;
+    }
+}
 </style>
