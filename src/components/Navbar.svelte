@@ -1,4 +1,5 @@
 <script>
+    export let title = "Title";
 </script>
 
 <style>
@@ -150,7 +151,7 @@
     <ul class="navbar-nav">
         <li class="logo">
             <div class="nav-link">
-                <span class="link-text logo-text">Equilibrium</span>
+                <span class="link-text logo-text">{title}</span>
                 <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right"
                     role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                     class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x">

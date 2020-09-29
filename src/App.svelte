@@ -2,7 +2,7 @@
     import Navbar from "./components/Navbar.svelte";
 </script>
 
-<Navbar />
+<Navbar title="Joxtacy"/>
 
 <main>
 <div>
