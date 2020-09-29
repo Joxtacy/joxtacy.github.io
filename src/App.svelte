@@ -1,5 +1,6 @@
 <script>
     import Navbar from "./components/Navbar.svelte";
+    import InfoPage from "./components/InfoPage.svelte";
 </script>
 
 <Navbar title="Joxtacy" />
@@ -28,6 +29,12 @@
 <p>Facere doloremque aut, distinctio at vitae laborum quisquam quas nostrum nemo laboriosam enim nisi nam temporibus tempore! Amet, blanditiis? A illo cumque aspernatur esse labore fugit enim, sapiente harum veritatis.</p>
 <p>Blanditiis aperiam sequi dicta esse ratione, modi tenetur temporibus perferendis placeat quos libero, illum, itaque voluptatibus cum. Rerum, pariatur officiis! Veniam accusantium harum eaque cumque ullam beatae architecto sunt blanditiis.</p>
 <p>Ullam autem veniam consectetur voluptates assumenda, sapiente id odit tenetur soluta ipsam est velit. Beatae in recusandae alias magni, repellat pariatur perspiciatis, aperiam corrupti perferendis natus sequi doloremque accusantium odio.</p>
+
+<InfoPage title="About me">
+    <p slot="content">
+        Hi! I'm Jesper. A 30 something year old Swede currently learning the ways of the Japanese language in Tokyo. I enjoy coding (mostly Javascript), learning new things, and making music. I also like reading books, but I find it super hard to find a really good book to start reading. My favourite book yet is <a href="https://en.wikipedia.org/wiki/The_Psychopath_Test">The Psychopath Test: A Journey Through the Madness Industry</a> by <a href="https://en.wikipedia.org/wiki/Jon_Ronson">Jon Ronson</a>.
+    </p>
+</InfoPage>
 </main>
 
 <style>
