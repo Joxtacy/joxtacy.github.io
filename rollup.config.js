@@ -1,13 +1,13 @@
 import svelte from "rollup-plugin-svelte";
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import html from "rollup-plugin-bundle-html";
 import { terser } from "rollup-plugin-terser";
 import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
-import html from "rollup-plugin-bundle-html";
 import postcss from "rollup-plugin-postcss";
-import babel from "rollup-plugin-babel";
 import del from "rollup-plugin-delete";
+import copy from "rollup-plugin-copy";
 
 const isProduction = process.env.MODE === "production";
 
@@ -20,14 +20,28 @@ export default {
         format: "iife"
     },
     plugins: [
+        copy({
+            targets: [
+                {
+                    src: "src/global.css",
+                    dest: isProduction ? "public" : "serve"
+                },
+                {
+                    src: "favicon.ico",
+                    dest: isProduction ? "public" : "serve"
+                }
+            ]
+        }),
+
         del({
-            targets: isProduction ? "public/bundle*" : "serve/bundle*"
+            targets: isProduction ? ["public/*", "index.html"] : "serve/*",
+            verbose: true
         }),
 
         html({
             template: "src/index.html",
             dest: isProduction ? "public" : "serve",
-            filename: isProduction ? "../index.html" : "index.html"
+            filename: "index.html",
         }),
 
         svelte({
@@ -45,10 +59,6 @@ export default {
         resolve({
             browser: true,
             dedupe: importee => importee === "svelte" || importee.startsWith("svelte/")
-        }),
-
-        babel({
-            extensions: [".js", ".mjs", ".html", ".svelte"]
         }),
 
         commonjs(),
